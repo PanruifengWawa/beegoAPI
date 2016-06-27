@@ -1,0 +1,32 @@
+
+<html>
+<head>
+    <title></title>
+	<script src="static/js/jquery.js"></script>
+	<meta http-equiv="content-Type" content="text/html; charset=utf-8">
+</head>
+<body>
+	
+<button onclick="test()"> test </button>
+
+<script>
+    function test() {
+         $.ajax({
+                type: "POST",
+                url: "http://localhost:8080/v1/t_token",
+                dataType: "json",
+
+                data:  JSON.stringify({ "Token": "哈哈on" }),
+                success: function (data) {
+                      console.log(data);
+                },
+                error: function (data) {
+                    //200的响应也有可能被认定为error，responseText中没有Message部分
+                    alert($.parseJSON(data.responseText).Message);
+                }
+            });
+    }
+
+</script>
+</body>
+</html>
