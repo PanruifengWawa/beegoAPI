@@ -1,8 +1,8 @@
 package main
 
 import (
-	_ "newapi/docs"
-	_ "newapi/routers"
+	_ "beegoAPI/docs"
+	_ "beegoAPI/routers"
 
 	"github.com/astaxie/beego"
 
@@ -13,7 +13,10 @@ import (
 )
 
 func init() {
-	orm.RegisterDataBase("default", "mysql", "root:@tcp(127.0.0.1:3306)/godb")
+	orm.RegisterDriver("mysql", orm.DRMySQL)
+	orm.RegisterDataBase("default", "mysql", "root:root@tcp(127.0.0.1:3306)/godb")
+
+	orm.Debug = true
 }
 
 func main() {

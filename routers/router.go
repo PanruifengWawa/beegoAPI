@@ -8,13 +8,19 @@
 package routers
 
 import (
-	"newapi/controllers"
+	"beegoAPI/controllers"
 
 	"github.com/astaxie/beego"
 )
 
 func init() {
 	ns := beego.NewNamespace("/v1",
+
+		beego.NSNamespace("/t_fk_user",
+			beego.NSInclude(
+				&controllers.TFkUserController{},
+			),
+		),
 
 		beego.NSNamespace("/t_token",
 			beego.NSInclude(
@@ -29,6 +35,4 @@ func init() {
 		),
 	)
 	beego.AddNamespace(ns)
-
-	beego.Router("/index", &controllers.MainController{})
 }
