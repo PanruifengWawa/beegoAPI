@@ -1,0 +1,5 @@
+nguage: go
+
+go:
+  - 1.4
+  - master

@@ -1,0 +1,11 @@
+2016/08/12 17:31:04 [asm_386.s:2287][I] http server Running on :8081
+2016/08/12 17:31:17 [router.go:829][D] | GET        | /v1/t_fk_user                            | 583.661µs        | match      | /v1/t_fk_user/                           | 
+2016/08/12 17:31:42 [asm_386.s:2287][I] http server Running on :8081
+2016/08/12 17:31:44 [router.go:829][D] | GET        | /v1/t_fk_user                            | 701.592µs        | match      | /v1/t_fk_user/                           | 
+2016/08/12 17:32:59 [asm_386.s:2287][I] http server Running on :8081
+2016/08/12 17:33:01 [router.go:829][D] | GET        | /v1/t_fk_user                            | 602.138µs        | match      | /v1/t_fk_user/                           | 
+2016/08/12 17:33:27 [asm_386.s:2287][I] http server Running on :8081
+2016/08/12 17:33:29 [router.go:829][D] | GET        | /v1/t_fk_user                            | 725.01µs         | match      | /v1/t_fk_user/                           | 
+2016/08/12 17:33:29 [router.go:829][D] | GET        | /v1/t_fk_user                            | 398.28µs         | match      | /v1/t_fk_user/                           | 
+2016/08/12 17:34:56 [asm_386.s:2287][I] http server Running on :8081
+2016/08/12 17:34:59 [router.go:829][D] | GET        | /v1/t_fk_user                            | 623.551µs        | match      | /v1/t_fk_user/                           | 
