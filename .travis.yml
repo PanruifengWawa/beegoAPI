@@ -1,5 +1,7 @@
 language: go
-
+install:
+  - go get -u github.com/astaxie/beego
+  - go install  github.com/astaxie/beego
 go:
   - 1.4
   - master
