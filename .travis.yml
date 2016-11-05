@@ -1,5 +1,5 @@
 language: go
-script:go get -u github.com/astaxie/beego && go install  github.com/astaxie/beego && go test
+script: go get github.com/astaxie/beego && go install  github.com/astaxie/beego && go test
 
 go:
   - 1.4
