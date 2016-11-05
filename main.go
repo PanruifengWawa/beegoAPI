@@ -13,10 +13,17 @@ import (
 )
 
 func init() {
-	orm.RegisterDriver("mysql", orm.DRMySQL)
+	//	orm.RegisterDriver("mysql", orm.DRMySQL)
 	orm.RegisterDataBase("default", "mysql", "root:root@tcp(127.0.0.1:3306)/godb")
 
+	//	o := orm.NewOrm()
+	//	dr := o.Driver()
+	//	fmt.Println(dr.Name())
+	//	fmt.Println(dr.Type())
 	orm.Debug = true
+
+	beego.SetLogger("file", `{"filename":"logs/test.log"}`)
+
 }
 
 func main() {

@@ -16,11 +16,13 @@ type TFkUser struct {
 }
 
 func (t *TFkUser) TableName() string {
-	return "t_fk_user"
+	return "user"
 }
 
 func init() {
-	orm.RegisterModel(new(TFkUser))
+	//	orm.RegisterModel(new(TFkUser))
+	orm.RegisterModelWithPrefix("t_fk_", new(TFkUser))
+	//table name in DB will be "Prefix + TableName()" which means the table name is t_fk_user
 }
 
 // AddTFkUser insert a new TFkUser into database and returns
